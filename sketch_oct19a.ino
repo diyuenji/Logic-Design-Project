@@ -181,12 +181,13 @@ void loop() {
       char customKey = keypad.getKey();
       if(customKey){
         if(customKey=='D'){
-          state=PAUSE_MODE2;
           lcd.clear();
+          state=PAUSE_MODE2;
+          
         }
 
 
-      }
+      }else{
         int loc=0;
         lcd.setCursor(0, 0); 
         lcd.print("So km // so tien");
@@ -206,7 +207,7 @@ void loop() {
       
         t-=5;
         delay(TIMER);//delay 0.5s    
-      
+      }
       break;
     }
     case  12://Pause MODE2
